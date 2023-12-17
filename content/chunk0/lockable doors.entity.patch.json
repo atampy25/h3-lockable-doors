@@ -1,1 +1,379 @@
-{"tempHash":"00376B0AC9245C86","tbluHash":"00B1F78AD5118A59","patch":[{"SubEntityOperation":["e394caab6960dfbe",{"SetPropertyValue":{"property_name":"m_eEvaluation","value":"ALL"}}]},{"SubEntityOperation":["e394caab6960dfbe",{"PatchArrayPropertyValue":["m_aValues",[{"RemoveItemByValue":"1da580f23143cfb7"},{"RemoveItemByValue":"f2ac44b0ec852170"},{"AddItemBefore":["f2ac44b0ec852170","feedc60b27674891"]},{"AddItemBefore":["f2ac44b0ec852170","feedfb3fa9329269"]}]]}]},{"SubEntityOperation":["96aaa4b84aac2399",{"AddPropertyAliasConnection":["m_Object",{"originalProperty":"m_Object","originalEntity":"feed5e850102e128"}]}]},{"SubEntityOperation":["96aaa4b84aac2399",{"AddPropertyAliasConnection":["m_UIHighlightGeom",{"originalProperty":"m_UIHighlightGeom","originalEntity":"feed5e850102e128"}]}]},{"SubEntityOperation":["96aaa4b84aac2399",{"AddPropertyAliasConnection":["m_aUIHighlightGeom",{"originalProperty":"m_aUIHighlightGeom","originalEntity":"feed5e850102e128"}]}]},{"AddEntity":["feeddac89f3d95cf",{"parent":"96aaa4b84aac2399","name":"Lockable Doors","factory":"[modules:/zentity.class].pc_entitytype","blueprint":"[modules:/zentity.class].pc_entityblueprint"}]},{"AddEntity":["feed5e850102e128",{"parent":"feeddac89f3d95cf","name":"Interaction_MainActionHelper_NoGlow","factory":"[assembly:/_pro/design/gamecore/interactionbase.template?/interaction_mainactionhelper_noglow.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/gamecore/interactionbase.template?/interaction_mainactionhelper_noglow.entitytemplate].pc_entityblueprint","properties":{"m_aSubactions":{"type":"TArray<SEntityTemplateReference>","value":["feed6f9311272e6f","feedb9b2c76defdf"]},"m_bRequiresHitmanFacing":{"type":"bool","value":false},"m_bWorldAlignPrompt":{"type":"bool","value":true},"m_bIgnoreCollision":{"type":"bool","value":false},"m_bRequiresHitmanInFront":{"type":"bool","value":false},"m_Object":{"type":"SEntityTemplateReference","value":null},"m_aUIHighlightGeom":{"type":"TArray<SEntityTemplateReference>","value":[]},"m_eidParent":{"type":"SEntityTemplateReference","value":"96aaa4b84aac2399","postInit":true},"m_aPromptPositions":{"type":"TArray<SEntityTemplateReference>","value":["feed5e15f7db0ee2","feed05706f533909"]}}}]},{"AddEntity":["feed6f9311272e6f",{"parent":"feed5e850102e128","name":"IS_LockDoor","factory":"[assembly:/_pro/design/gamecore/interactionbase.template?/interaction_subaction_noinvestigate.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/gamecore/interactionbase.template?/interaction_subaction_noinvestigate.entitytemplate].pc_entityblueprint","properties":{"m_eActionType":{"type":"EActionType","value":"AT_USE_NORMAL"},"m_rPromptTextResource":{"type":"ZRuntimeResourceID","value":{"resource":"004D594E55545382","flag":"5F"}},"m_sPromptText":{"type":"ZString","value":"\n      "},"m_bOverrideInteractionRange":{"type":"bool","value":true},"m_fOverrideInteractionRangeValue":{"type":"float32","value":1.7000000476837158},"m_bOverrideInteractionRangeVR":{"type":"bool","value":true},"m_ConditionList_Visible":{"type":"TArray<SEntityTemplateReference>","value":["0b018819467ff1bb","42e6c83fbc729889","e394caab6960dfbe"],"postInit":true},"m_ConditionList_Usable":{"type":"TArray<SEntityTemplateReference>","value":["0b018819467ff1bb","42e6c83fbc729889","e394caab6960dfbe"],"postInit":true},"m_eInputAction":{"type":"EHM5GameInputFlag","value":"eGameInputFiberwire"},"m_RuntimeNetworkResourceID":{"type":"ZRuntimeResourceID","value":{"resource":"[assembly:/animationnetworks/hitman01/tampering/hm_interact_key_90cm.aln].pc_rtn","flag":"9F"}},"m_rContextLocation":{"type":"SEntityTemplateReference","value":"2ccc04a736a635eb","postInit":true}},"events":{"Completed":{"SetTrue":["feedb04c9d98c44c"]},"Started":{"Send":["5317e850c9280781"]}}}]},{"AddEntity":["feed05706f533909",{"parent":"feed5e850102e128","name":"Prompt spatial (outside)","factory":"[modules:/zspatialentity.class].pc_entitytype","blueprint":"[modules:/zspatialentity.class].pc_entityblueprint","properties":{"m_eidParent":{"type":"SEntityTemplateReference","value":"96aaa4b84aac2399","postInit":true},"m_mTransform":{"type":"SMatrix43","value":{"rotation":{"x":0,"y":0,"z":0},"position":{"x":0,"y":0.20000000298023224,"z":1}}}}}]},{"AddEntity":["feed5e15f7db0ee2",{"parent":"feed5e850102e128","name":"Prompt spatial (inside)","factory":"[modules:/zspatialentity.class].pc_entitytype","blueprint":"[modules:/zspatialentity.class].pc_entityblueprint","properties":{"m_eidParent":{"type":"SEntityTemplateReference","value":"96aaa4b84aac2399","postInit":true},"m_mTransform":{"type":"SMatrix43","value":{"rotation":{"x":0,"y":0,"z":0},"position":{"x":0,"y":-0.20000000298023224,"z":1}}}}}]},{"AddEntity":["feedb04c9d98c44c",{"parent":"feeddac89f3d95cf","name":"Door is locked","factory":"[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entityblueprint","properties":{"m_bValue":{"type":"bool","value":false}}}]},{"AddEntity":["feedfb3fa9329269",{"parent":"feedb04c9d98c44c","name":"Door is NOT locked","factory":"[modules:/zinvertedcondition.class].pc_entitytype","blueprint":"[modules:/zinvertedcondition.class].pc_entityblueprint","properties":{"m_rCondition":{"type":"SEntityTemplateReference","value":"feedb04c9d98c44c"}}}]},{"AddEntity":["feedc60b27674891",{"parent":"e394caab6960dfbe","name":"Original","factory":"[assembly:/_pro/design/logic/valuebool.template?/valuebool_operation.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valuebool.template?/valuebool_operation.entitytemplate].pc_entityblueprint","properties":{"m_eEvaluation":{"type":"ZValueBool_Operation_Signal.EEvaluationType","value":"ANY"},"m_aValues":{"type":"TArray<SEntityTemplateReference>","value":["1da580f23143cfb7","f2ac44b0ec852170"],"postInit":true}}}]},{"AddEntity":["feedb9b2c76defdf",{"parent":"feed5e850102e128","name":"IS_UnlockDoor","factory":"[assembly:/_pro/design/gamecore/interactionbase.template?/interaction_subaction_noinvestigate.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/gamecore/interactionbase.template?/interaction_subaction_noinvestigate.entitytemplate].pc_entityblueprint","properties":{"m_eActionType":{"type":"EActionType","value":"AT_USE_NORMAL"},"m_rPromptTextResource":{"type":"ZRuntimeResourceID","value":{"resource":"00754E4C4F434B24","flag":"5F"}},"m_sPromptText":{"type":"ZString","value":"\n      "},"m_bOverrideInteractionRange":{"type":"bool","value":true},"m_fOverrideInteractionRangeValue":{"type":"float32","value":1.7000000476837158},"m_bOverrideInteractionRangeVR":{"type":"bool","value":true},"m_ConditionList_Visible":{"type":"TArray<SEntityTemplateReference>","value":["feedb04c9d98c44c"],"postInit":true},"m_ConditionList_Usable":{"type":"TArray<SEntityTemplateReference>","value":["feedb04c9d98c44c"],"postInit":true},"m_eInputAction":{"type":"EHM5GameInputFlag","value":"eGameInputFiberwire"},"m_RuntimeNetworkResourceID":{"type":"ZRuntimeResourceID","value":{"resource":"[assembly:/animationnetworks/hitman01/tampering/hm_interact_key_90cm.aln].pc_rtn","flag":"9F"}},"m_rContextLocation":{"type":"SEntityTemplateReference","value":"2ccc04a736a635eb","postInit":true}},"events":{"Completed":{"SetFalse":["feedb04c9d98c44c"]},"Started":{"Send":["5317e850c9280781"]}}}]},{"AddEntity":["feed1297ce92b7cf",{"parent":"feed346c9fbe5a30","name":"Volume trigger","factory":"[modules:/zvolumetriggerlistenerentity.class].pc_entitytype","blueprint":"[modules:/zvolumetriggerlistenerentity.class].pc_entityblueprint","properties":{"m_Boxes":{"type":"TArray<SEntityTemplateReference>","value":["feed346c9fbe5a30"]},"m_rEnableCondition":{"type":"SEntityTemplateReference","value":"feedb04c9d98c44c"},"m_TriggerOnHitman":{"type":"bool","value":false},"m_TriggerOnActorAlive":{"type":"bool","value":true}},"events":{"OnTrue":{"SetTrue":["989f0e97a1a4072b"]},"OnFalse":{"SetFalse":["989f0e97a1a4072b"]}}}]},{"AddEntity":["feed346c9fbe5a30",{"parent":"feeddac89f3d95cf","name":"Volume to activate PFObstacle","factory":"[modules:/zboxvolumeentity.class].pc_entitytype","blueprint":"[modules:/zboxvolumeentity.class].pc_entityblueprint","properties":{"m_mTransform":{"type":"SMatrix43","value":{"rotation":{"x":0,"y":0,"z":0},"position":{"x":0,"y":0,"z":0}}},"m_vGlobalSize":{"type":"SVector3","value":{"x":4.5,"y":4.5,"z":1}},"m_eidParent":{"type":"SEntityTemplateReference","value":"96aaa4b84aac2399","postInit":true}}}]},{"AddEntity":["feedf5205eb9923c",{"parent":"feeddac89f3d95cf","name":"Door breach","factory":"[assembly:/_pro/design/logic/valuebool.template?/valuebool_changed.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valuebool.template?/valuebool_changed.entitytemplate].pc_entityblueprint","properties":{"m_rValueEntity":{"type":"SEntityTemplateReference","value":"6cab2928735b6717"}},"events":{"OnTrue":{"Poll":["feed9e4c935bea40"]}}}]},{"AddEntity":["feed9e4c935bea40",{"parent":"feedf5205eb9923c","name":"Poll locked","factory":"[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entityblueprint","properties":{"m_rValueEntity":{"type":"SEntityTemplateReference","value":"feedb04c9d98c44c"}},"events":{"PollTrue":{"SetTrue":["b386e84cf1fa0302"],"OnActivateHit":["96aaa4b84aac2399"],"OnActivate":["96aaa4b84aac2399"],"Send":["feeda11aa01cf249"],"SetFalse":["feedb04c9d98c44c"]}}}]},{"AddEntity":["feeda11aa01cf249",{"parent":"feedf5205eb9923c","name":"play_door_crowbar_wood_open_01b","factory":"[modules:/zaudioevententity.class].pc_entitytype","blueprint":"[modules:/zaudioevententity.class].pc_entityblueprint","properties":{"m_pMainEvent":{"type":"ZRuntimeResourceID","value":{"resource":"[assembly:/sound/wwise/exportedwwisedata/events/props_events/setpieces/access/door_crowbar_wood_break/play_door_crowbar_wood_open_01b.wwiseevent].pc_wwisebank","flag":"5F"}},"m_pEmitter":{"type":"SEntityTemplateReference","value":"5da2550a85c3e24a"}}}]}],"patchVersion":6}
+{
+	"tempHash": "00376B0AC9245C86",
+	"tbluHash": "00B1F78AD5118A59",
+	"patch": [
+		{
+			"SubEntityOperation": [
+				"e394caab6960dfbe",
+				{ "SetPropertyValue": { "property_name": "m_eEvaluation", "value": "ALL" } }
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"e394caab6960dfbe",
+				{
+					"PatchArrayPropertyValue": [
+						"m_aValues",
+						[
+							{ "RemoveItemByValue": "1da580f23143cfb7" },
+							{ "RemoveItemByValue": "f2ac44b0ec852170" },
+							{ "AddItemBefore": ["f2ac44b0ec852170", "feedc60b27674891"] },
+							{ "AddItemBefore": ["f2ac44b0ec852170", "feedfb3fa9329269"] }
+						]
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"96aaa4b84aac2399",
+				{
+					"AddPropertyAliasConnection": [
+						"m_Object",
+						{ "originalProperty": "m_Object", "originalEntity": "feed5e850102e128" }
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"96aaa4b84aac2399",
+				{
+					"AddPropertyAliasConnection": [
+						"m_UIHighlightGeom",
+						{ "originalProperty": "m_UIHighlightGeom", "originalEntity": "feed5e850102e128" }
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"96aaa4b84aac2399",
+				{
+					"AddPropertyAliasConnection": [
+						"m_aUIHighlightGeom",
+						{ "originalProperty": "m_aUIHighlightGeom", "originalEntity": "feed5e850102e128" }
+					]
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feeddac89f3d95cf",
+				{
+					"parent": "96aaa4b84aac2399",
+					"name": "Lockable Doors",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feed5e850102e128",
+				{
+					"parent": "feeddac89f3d95cf",
+					"name": "Interaction_MainActionHelper_NoGlow",
+					"factory": "[assembly:/_pro/design/gamecore/interactionbase.template?/interaction_mainactionhelper_noglow.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/interactionbase.template?/interaction_mainactionhelper_noglow.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_aSubactions": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["feed6f9311272e6f", "feedb9b2c76defdf"]
+						},
+						"m_bRequiresHitmanFacing": { "type": "bool", "value": false },
+						"m_bWorldAlignPrompt": { "type": "bool", "value": true },
+						"m_bIgnoreCollision": { "type": "bool", "value": false },
+						"m_bRequiresHitmanInFront": { "type": "bool", "value": false },
+						"m_Object": { "type": "SEntityTemplateReference", "value": null },
+						"m_aUIHighlightGeom": { "type": "TArray<SEntityTemplateReference>", "value": [] },
+						"m_eidParent": { "type": "SEntityTemplateReference", "value": "96aaa4b84aac2399", "postInit": true },
+						"m_aPromptPositions": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["feed5e15f7db0ee2", "feed05706f533909"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feed6f9311272e6f",
+				{
+					"parent": "feed5e850102e128",
+					"name": "IS_LockDoor",
+					"factory": "[assembly:/_pro/design/gamecore/interactionbase.template?/interaction_subaction_noinvestigate.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/interactionbase.template?/interaction_subaction_noinvestigate.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_eActionType": { "type": "EActionType", "value": "AT_USE_NORMAL" },
+						"m_rPromptTextResource": {
+							"type": "ZRuntimeResourceID",
+							"value": { "resource": "004D594E55545382", "flag": "5F" }
+						},
+						"m_sPromptText": { "type": "ZString", "value": "\n      " },
+						"m_bOverrideInteractionRange": { "type": "bool", "value": true },
+						"m_fOverrideInteractionRangeValue": { "type": "float32", "value": 1.7000000476837158 },
+						"m_bOverrideInteractionRangeVR": { "type": "bool", "value": true },
+						"m_ConditionList_Visible": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["0b018819467ff1bb", "42e6c83fbc729889", "e394caab6960dfbe"],
+							"postInit": true
+						},
+						"m_ConditionList_Usable": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["0b018819467ff1bb", "42e6c83fbc729889", "e394caab6960dfbe"],
+							"postInit": true
+						},
+						"m_eInputAction": { "type": "EHM5GameInputFlag", "value": "eGameInputFiberwire" },
+						"m_RuntimeNetworkResourceID": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/animationnetworks/hitman01/tampering/hm_interact_key_90cm.aln].pc_rtn",
+								"flag": "9F"
+							}
+						},
+						"m_rContextLocation": {
+							"type": "SEntityTemplateReference",
+							"value": "2ccc04a736a635eb",
+							"postInit": true
+						}
+					},
+					"events": {
+						"Completed": { "SetTrue": ["feedb04c9d98c44c"] },
+						"Started": { "Send": ["5317e850c9280781"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feed05706f533909",
+				{
+					"parent": "feed5e850102e128",
+					"name": "Prompt spatial (outside)",
+					"factory": "[modules:/zspatialentity.class].pc_entitytype",
+					"blueprint": "[modules:/zspatialentity.class].pc_entityblueprint",
+					"properties": {
+						"m_eidParent": { "type": "SEntityTemplateReference", "value": "96aaa4b84aac2399", "postInit": true },
+						"m_mTransform": {
+							"type": "SMatrix43",
+							"value": {
+								"rotation": { "x": 0, "y": 0, "z": 0 },
+								"position": { "x": 0, "y": 0.20000000298023224, "z": 1 }
+							}
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feed5e15f7db0ee2",
+				{
+					"parent": "feed5e850102e128",
+					"name": "Prompt spatial (inside)",
+					"factory": "[modules:/zspatialentity.class].pc_entitytype",
+					"blueprint": "[modules:/zspatialentity.class].pc_entityblueprint",
+					"properties": {
+						"m_eidParent": { "type": "SEntityTemplateReference", "value": "96aaa4b84aac2399", "postInit": true },
+						"m_mTransform": {
+							"type": "SMatrix43",
+							"value": {
+								"rotation": { "x": 0, "y": 0, "z": 0 },
+								"position": { "x": 0, "y": -0.20000000298023224, "z": 1 }
+							}
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feedb04c9d98c44c",
+				{
+					"parent": "feeddac89f3d95cf",
+					"name": "Door is locked",
+					"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entityblueprint",
+					"properties": { "m_bValue": { "type": "bool", "value": false } }
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feedfb3fa9329269",
+				{
+					"parent": "feedb04c9d98c44c",
+					"name": "Door is NOT locked",
+					"factory": "[modules:/zinvertedcondition.class].pc_entitytype",
+					"blueprint": "[modules:/zinvertedcondition.class].pc_entityblueprint",
+					"properties": { "m_rCondition": { "type": "SEntityTemplateReference", "value": "feedb04c9d98c44c" } }
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feedc60b27674891",
+				{
+					"parent": "e394caab6960dfbe",
+					"name": "Original",
+					"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_operation.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_operation.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_eEvaluation": { "type": "ZValueBool_Operation_Signal.EEvaluationType", "value": "ANY" },
+						"m_aValues": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["1da580f23143cfb7", "f2ac44b0ec852170"],
+							"postInit": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feedb9b2c76defdf",
+				{
+					"parent": "feed5e850102e128",
+					"name": "IS_UnlockDoor",
+					"factory": "[assembly:/_pro/design/gamecore/interactionbase.template?/interaction_subaction_noinvestigate.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/interactionbase.template?/interaction_subaction_noinvestigate.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_eActionType": { "type": "EActionType", "value": "AT_USE_NORMAL" },
+						"m_rPromptTextResource": {
+							"type": "ZRuntimeResourceID",
+							"value": { "resource": "00754E4C4F434B24", "flag": "5F" }
+						},
+						"m_sPromptText": { "type": "ZString", "value": "\n      " },
+						"m_bOverrideInteractionRange": { "type": "bool", "value": true },
+						"m_fOverrideInteractionRangeValue": { "type": "float32", "value": 1.7000000476837158 },
+						"m_bOverrideInteractionRangeVR": { "type": "bool", "value": true },
+						"m_ConditionList_Visible": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["feedb04c9d98c44c"],
+							"postInit": true
+						},
+						"m_ConditionList_Usable": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["feedb04c9d98c44c"],
+							"postInit": true
+						},
+						"m_eInputAction": { "type": "EHM5GameInputFlag", "value": "eGameInputFiberwire" },
+						"m_RuntimeNetworkResourceID": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/animationnetworks/hitman01/tampering/hm_interact_key_90cm.aln].pc_rtn",
+								"flag": "9F"
+							}
+						},
+						"m_rContextLocation": {
+							"type": "SEntityTemplateReference",
+							"value": "2ccc04a736a635eb",
+							"postInit": true
+						}
+					},
+					"events": {
+						"Completed": { "SetFalse": ["feedb04c9d98c44c"] },
+						"Started": { "Send": ["5317e850c9280781"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feed1297ce92b7cf",
+				{
+					"parent": "feed346c9fbe5a30",
+					"name": "Volume trigger",
+					"factory": "[modules:/zvolumetriggerlistenerentity.class].pc_entitytype",
+					"blueprint": "[modules:/zvolumetriggerlistenerentity.class].pc_entityblueprint",
+					"properties": {
+						"m_Boxes": { "type": "TArray<SEntityTemplateReference>", "value": ["feed346c9fbe5a30"] },
+						"m_rEnableCondition": { "type": "SEntityTemplateReference", "value": "feedb04c9d98c44c" },
+						"m_TriggerOnHitman": { "type": "bool", "value": false },
+						"m_TriggerOnActorAlive": { "type": "bool", "value": true }
+					},
+					"events": {
+						"OnTrue": { "SetTrue": ["989f0e97a1a4072b"] },
+						"OnFalse": { "SetFalse": ["989f0e97a1a4072b"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feed346c9fbe5a30",
+				{
+					"parent": "feeddac89f3d95cf",
+					"name": "Volume to activate PFObstacle",
+					"factory": "[modules:/zboxvolumeentity.class].pc_entitytype",
+					"blueprint": "[modules:/zboxvolumeentity.class].pc_entityblueprint",
+					"properties": {
+						"m_mTransform": {
+							"type": "SMatrix43",
+							"value": { "rotation": { "x": 0, "y": 0, "z": 0 }, "position": { "x": 0, "y": 0, "z": 0 } }
+						},
+						"m_vGlobalSize": { "type": "SVector3", "value": { "x": 4.5, "y": 4.5, "z": 1 } },
+						"m_eidParent": { "type": "SEntityTemplateReference", "value": "96aaa4b84aac2399", "postInit": true }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feedf5205eb9923c",
+				{
+					"parent": "feeddac89f3d95cf",
+					"name": "Door breach",
+					"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_changed.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_changed.entitytemplate].pc_entityblueprint",
+					"properties": { "m_rValueEntity": { "type": "SEntityTemplateReference", "value": "6cab2928735b6717" } },
+					"events": { "OnTrue": { "Poll": ["feed9e4c935bea40"] } }
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feed9e4c935bea40",
+				{
+					"parent": "feedf5205eb9923c",
+					"name": "Poll locked",
+					"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entityblueprint",
+					"properties": { "m_rValueEntity": { "type": "SEntityTemplateReference", "value": "feedb04c9d98c44c" } },
+					"events": {
+						"PollTrue": {
+							"SetTrue": ["b386e84cf1fa0302"],
+							"OnActivateHit": ["96aaa4b84aac2399"],
+							"OnActivate": ["96aaa4b84aac2399"],
+							"Send": ["feeda11aa01cf249"],
+							"SetFalse": ["feedb04c9d98c44c"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feeda11aa01cf249",
+				{
+					"parent": "feedf5205eb9923c",
+					"name": "play_door_crowbar_wood_open_01b",
+					"factory": "[modules:/zaudioevententity.class].pc_entitytype",
+					"blueprint": "[modules:/zaudioevententity.class].pc_entityblueprint",
+					"properties": {
+						"m_pMainEvent": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/sound/wwise/exportedwwisedata/events/props_events/setpieces/access/door_crowbar_wood_break/play_door_crowbar_wood_open_01b.wwiseevent].pc_wwisebank",
+								"flag": "5F"
+							}
+						},
+						"m_pEmitter": { "type": "SEntityTemplateReference", "value": "5da2550a85c3e24a" }
+					}
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}
