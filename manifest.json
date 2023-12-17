@@ -1,9 +1,28 @@
 {
 	"$schema": "https://raw.githubusercontent.com/atampy25/simple-mod-framework/main/Mod%20Manager/src/lib/manifest-schema.json",
 	"version": "0.1.0",
-	"id": "YourPreferredAlias.AnIDForTheMod",
-	"name": "Test Mod",
-	"description": "A truly amazing mod",
-	"authors": ["Your Preferred Alias"],
-	"frameworkVersion": "2.25.1"
+	"id": "Atampy26.LockableDoors",
+	"name": "Lockable Doors",
+	"description": "Allows you to lock doors so NPCs can't open them.",
+	"authors": ["Atampy26"],
+	"frameworkVersion": "2.25.1",
+	"contentFolders": ["content"],
+	"localisation": {
+		"english": {
+			"UI_ATAMPY26_LOCK_DOOR": "Lock",
+			"UI_ATAMPY26_UNLOCK_DOOR": "Unlock"
+		},
+		"french": {},
+		"chineseSimplified": {},
+		"chineseTraditional": {},
+		"german": {},
+		"italian": {},
+		"japanese": {},
+		"russian": {},
+		"spanish": {}
+	},
+	"localisedLines": {
+		"004D594E55545382": "UI_ATAMPY26_LOCK_DOOR",
+		"00754E4C4F434B24": "UI_ATAMPY26_UNLOCK_DOOR"
+	}
 }
