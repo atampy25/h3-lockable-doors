@@ -313,7 +313,7 @@
 							"type": "SMatrix43",
 							"value": { "rotation": { "x": 0, "y": 0, "z": 0 }, "position": { "x": 0, "y": 0, "z": 0 } }
 						},
-						"m_vGlobalSize": { "type": "SVector3", "value": { "x": 4.5, "y": 4.5, "z": 1 } },
+						"m_vGlobalSize": { "type": "SVector3", "value": { "x": 5.25, "y": 5.25, "z": 1 } },
 						"m_eidParent": { "type": "SEntityTemplateReference", "value": "96aaa4b84aac2399", "postInit": true }
 					}
 				}
