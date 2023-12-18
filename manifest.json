@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/atampy25/simple-mod-framework/main/Mod%20Manager/src/lib/manifest-schema.json",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"id": "Atampy26.LockableDoors",
 	"name": "Lockable Doors",
 	"description": "Allows you to lock doors so NPCs can't open them.",

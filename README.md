@@ -6,4 +6,4 @@ Allows you to lock doors so NPCs can't open them.
 
 ---
 
-`Atampy26.LockableDoors` v1.0.0, by Atampy26. This README was automatically generated from the mod's manifest.
+`Atampy26.LockableDoors` v1.0.1, by Atampy26. This README was automatically generated from the mod's manifest.
